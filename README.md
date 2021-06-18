@@ -6,3 +6,7 @@ Rache supports concurrent secure access by multiple clients, and achieves data c
 In a distributed raft cluster, the servers communicate through remote procedure calls. I chose gRPC as the underlying RPC communication framework. It is based on Google's protocol buffer, has high performance, and supports streaming RPC communication. Details Information can be found here: https://grpc.io/docs/reference/.
 
 If you want to learn the raft algorithm, or build a simple distributed application for yourself, I believe that it will be very helpful to read this project. There are detailed comments in the code. I will keep updating this project and keep improving it, hoping that the performance and functions will become more and more powerful!
+
+需要了解gRPC的使用：
+
+http://doc.oschina.net/grpc?t=60133

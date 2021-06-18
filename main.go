@@ -18,7 +18,11 @@ var me = flag.Int("me", 0, "当前机器在集群中的编号，值从0开始")
 
 func main() {
 	flag.Parse()
+	// masterAddr:127.0.0.1:12301, 127.0.0.1:12302, 127.0.0.1:12303
 	masterAddr := conf.GlobalConfigObj.MasterAddr
+	// kvAddr: 127.0.0.1:12306, 127.0.0.1:12307, 127.0.0.1:12308
+	// kvAddr: 127.0.0.1:12309, 127.0.0.1:12310, 127.0.0.1:12311
+	// kvAddr: 127.0.0.1:12312, 127.0.0.1:12313, 127.0.0.1:12314
 	kvAddr := conf.GlobalConfigObj.GroupAddr[*me]
 	masterNum, kvServerNum := len(masterAddr), len(kvAddr)
 	persistSeq := 0
